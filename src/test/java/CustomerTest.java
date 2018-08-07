@@ -6,9 +6,12 @@ import static junit.framework.TestCase.assertEquals;
 public class CustomerTest {
 
         Customer customer;
+        Luggage luggage;
         @Before
         public void before(){
-            customer = new Customer("Mike");
+
+            luggage = new Luggage(13.0, 3);
+            customer = new Customer("Mike", luggage);
         }
 
         @Test

@@ -20,8 +20,8 @@ public class AirlineTest {
 
         flight = new Flight("Paris");
         flight2 = new Flight("Barcelona");
-        customer = new Customer("Mike");
         luggage = new Luggage(13.0, 3);
+        customer = new Customer("Mike", luggage);
         ticket = new Ticket(flight, customer);
         airline = new Airline();
     }
@@ -57,4 +57,9 @@ public class AirlineTest {
         airline.transferCustomerToADifferentFlight(customer, flight2);
         assertEquals("Barcelona", ticket.getFlight().getDestination());
     }
-}
+
+    @Test
+    public void canCheckInLuggageWithCustomer() {
+        airline.checkInCustomer(customer, flight);
+        assertEquals(1, flight.getLuggageList().size());
+    }}

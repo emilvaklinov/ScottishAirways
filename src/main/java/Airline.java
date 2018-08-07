@@ -10,6 +10,7 @@ public class Airline {
 
     public void checkInCustomer(Customer customer, Flight flight) {
         flight.addCustomerToCustomerList(customer);
+        checkInLuggage(customer.getLuggage(), flight);
     }
 
     public void checkInLuggage(Luggage luggage, Flight flight) {
@@ -21,6 +22,7 @@ public class Airline {
         Ticket ticketToChange = findTicket(customer);
         //change the flight on ticket to a new flight
         ticketToChange.setFlight(flight);
+        //move customer from the AL of the prev flight to the new one
     }
 
     public ArrayList<Ticket> getTickets() {
