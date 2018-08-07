@@ -12,6 +12,10 @@ public class Ticket {
         return this.flight;
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
     public void setFlight(Flight flight) {
         this.flight = flight;
     }
