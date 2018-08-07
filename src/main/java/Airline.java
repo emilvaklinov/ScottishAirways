@@ -1,6 +1,6 @@
 public class Airline {
 
-    public boolean checkInCustomer(Customer customer){
-        return true;
+    public void checkInCustomer(Customer customer, Flight flight){
+        flight.getCustomers().add(customer);
     }
 }

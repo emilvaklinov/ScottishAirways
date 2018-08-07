@@ -15,4 +15,7 @@ public class FlightTest {
     public void flightStartsEmpty(){
         assertEquals(0, flight.getCustomers().size());
     }
+
+
 }
+
