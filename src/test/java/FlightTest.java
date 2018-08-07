@@ -13,7 +13,7 @@ public class FlightTest {
 
     @Test
     public void flightStartsEmpty(){
-        assertEquals(0, flight.getCustomers().size());
+        assertEquals(0, flight.getCustomerList().size());
     }
 
 
