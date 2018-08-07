@@ -15,7 +15,7 @@ public class AirlineTest {
     public void before(){
         airline = new Airline();
         customer = new Customer("Mike");
-        flight = new Flight();
+        flight = new Flight("Paris");
         luggage = new Luggage(13.0, 3);
     }
 

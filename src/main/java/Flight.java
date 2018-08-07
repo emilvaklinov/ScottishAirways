@@ -4,10 +4,12 @@ public class Flight {
 
     private ArrayList<Customer> customerList;
     private ArrayList<Luggage> luggageList;
+    private String destination;
 
-    public Flight(){
-    customerList = new ArrayList<>();
-    luggageList = new ArrayList<>();
+    public Flight(String destination){
+    this.customerList = new ArrayList<>();
+    this.luggageList = new ArrayList<>();
+    this.destination = destination;
     }
 
     public ArrayList<Customer> getCustomerList()
@@ -25,5 +27,9 @@ public class Flight {
 
     public void addLuggageToLuggageList(Luggage luggage) {
         this.luggageList.add(luggage);
+    }
+
+    public String getDestination(){
+        return this.destination;
     }
 }
